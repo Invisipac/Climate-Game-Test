@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class MouseFollow : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class MouseFollow : MonoBehaviour
     [SerializeField] GameObject cursor;
     [SerializeField] GameObject objectToPlace;
     [SerializeField] Transform horizonLine;
+    [SerializeField] UnityEvent WindmillAdded;
     private Vector3 mousePos;
 
     void Start()
@@ -37,6 +39,7 @@ public class MouseFollow : MonoBehaviour
         if (input.started)
         {
             Instantiate(objectToPlace, cursor.transform.position, Quaternion.identity);
+            WindmillAdded.Invoke();
             return;
         }
     }
