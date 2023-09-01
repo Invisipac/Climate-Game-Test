@@ -219,7 +219,7 @@ RectTransform:
   m_Children:
   - {fileID: 921028744}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -292,7 +292,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &455122696
 GameObject:
@@ -327,11 +327,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursor: {fileID: 455122696}
   objectToPlace: {fileID: -2253911629886400664, guid: 5deb6ee3ca128324fb6b3cdc4d6c7c00, type: 3}
-  horizonLine: {fileID: 1749853102}
+  horizonLine: {fileID: 1503534339}
   WindmillAdded:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1725884278}
+      - m_Target: {fileID: 2120171279}
         m_TargetAssemblyTypeName: GameManage, Assembly-CSharp
         m_MethodName: AddWindmill
         m_Mode: 1
@@ -780,7 +780,7 @@ PrefabInstance:
     - target: {fileID: 7791037908832315981, guid: 32eb3d3a9ad5d854f8ca275525726fe0, type: 3}
       propertyPath: gameManager
       value: 
-      objectReference: {fileID: 1725884277}
+      objectReference: {fileID: 2120171278}
     - target: {fileID: 7791037908832315981, guid: 32eb3d3a9ad5d854f8ca275525726fe0, type: 3}
       propertyPath: smogSpawner
       value: 
@@ -815,10 +815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1664024949595851022, guid: 32eb3d3a9ad5d854f8ca275525726fe0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 661403211}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32eb3d3a9ad5d854f8ca275525726fe0, type: 3}
 --- !u!224 &921028744 stripped
@@ -874,4 +871,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1503534338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1503534339}
+  m_Layer: 0
+  m_Name: Horizon Line
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1503534339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503534338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.79, y: -0.29, z: 4.7438703}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2120171278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2120171280}
+  - component: {fileID: 2120171279}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2120171279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120171278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 192a6da0d81401349afe815012f66b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2120171280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120171278}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.07811202, y: 0.24874772, z: 4.7438703}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
