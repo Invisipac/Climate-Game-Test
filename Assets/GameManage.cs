@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManage : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    public Text goldText;
     private int windmillCounter = 0;
+    private int gold = 0;
+    
 
-
+    private void Update()
+    {
+        
+    }
     public void AddWindmill()
     {
         windmillCounter += 1;
@@ -19,14 +25,14 @@ public class GameManage : MonoBehaviour
         return windmillCounter;
     }
 
-    void Start()
+    public int GetGold()
     {
-        
+        return gold;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddGold(int amount)
     {
-        
+        gold += amount;
+        goldText.text = gold.ToString();
     }
 }

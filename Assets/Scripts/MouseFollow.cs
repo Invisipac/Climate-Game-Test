@@ -12,11 +12,13 @@ public class MouseFollow : MonoBehaviour
     [SerializeField] GameObject objectToPlace;
     [SerializeField] Transform horizonLine;
     [SerializeField] UnityEvent WindmillAdded;
+    private GameManage manage;
     private Vector3 mousePos;
 
     void Start()
     {
         mousePos = new Vector3();
+        manage = GameObject.FindFirstObjectByType<GameManage>();
     }
 
     // Update is called once per frame
@@ -36,10 +38,11 @@ public class MouseFollow : MonoBehaviour
 
     public void PlaceObject(InputAction.CallbackContext input)
     {
-        if (input.started)
+        if (input.started && manage.GetGold() >= 10)
         {
             Instantiate(objectToPlace, cursor.transform.position, Quaternion.identity);
             WindmillAdded.Invoke();
+            manage.AddGold(-10);
             return;
         }
     }

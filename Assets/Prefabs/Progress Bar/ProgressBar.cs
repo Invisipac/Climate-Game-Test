@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 [ExecuteInEditMode()]
 public class ProgressBar : MonoBehaviour
 {
     public float max;
-    public float cur;
+    private float cur;
     public Image fillBar;
 
     [SerializeField] GameObject smogSpawner;
@@ -34,6 +36,7 @@ public class ProgressBar : MonoBehaviour
         {
             SetFillAmount();
             timer = 0;
+            GameOver();
         }
 
         
@@ -43,5 +46,14 @@ public class ProgressBar : MonoBehaviour
     {
         fillBar.fillAmount += (float) smogSpawn.GetCounter() / 100;
         fillBar.fillAmount -= (float) 2 * gameManage.GetWindmills() / 100;
+    }
+
+    private void GameOver()
+    {
+        if (fillBar.fillAmount == 1)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+   
     }
 }

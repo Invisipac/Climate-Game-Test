@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -8,13 +9,19 @@ public class moveSmogScript : MonoBehaviour
     private float changeDirRate = 2;
     private float timer = 0;
     private int moveSpeed = 5;
-    private new Vector3 direction;
+    private Vector3 direction;
 
     private int smogHealth = 0;
+
+    
+
+    private GameManage manage;
+
     // Start is called before the first frame update
     void Start()
     {
         direction = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), 0);
+        manage = GameObject.FindFirstObjectByType<GameManage>();
     }
 
     // Update is called once per frame
@@ -38,8 +45,13 @@ public class moveSmogScript : MonoBehaviour
         transform.position += direction * moveSpeed * Time.deltaTime;
 
     }
+
     private void OnMouseDown()
     {
         Destroy(gameObject);
+        manage.AddGold(5);
+        Debug.Log(manage.GetGold());
+
     }
+
 }
