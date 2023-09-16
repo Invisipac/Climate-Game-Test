@@ -82,9 +82,13 @@ public class MouseFollow : MonoBehaviour
 
     public void SetCursor()
     {
-        windmillActive = !windmillActive;
-        windmill.SetActive(windmillActive);
-        Debug.Log(windmill.activeSelf);
+        if (!(manage.GetGold() < 10))
+        {
+            windmillActive = !windmillActive;
+            windmill.SetActive(windmillActive);
+        }
+        
+        
         //cursor.GetComponent<SpriteRenderer>().enabled = true;
     }
 
