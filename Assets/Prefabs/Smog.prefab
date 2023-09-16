@@ -104,6 +104,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52549de74a574dd429d2f8ed0d433fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SmogDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
+  smogParent: {fileID: 9220041636188275209, guid: fdfcde3273c469a4f9ea5d829d604a98, type: 3}
 --- !u!61 &2572023341136683380
 BoxCollider2D:
   m_ObjectHideFlags: 0

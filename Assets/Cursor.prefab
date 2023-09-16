@@ -32,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 6437172148930778517}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5729164033087924365
 MonoBehaviour:
@@ -46,11 +46,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0617cbab63232634d9560df2db949398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToPlace: {fileID: 0}
+  objectToPlace: {fileID: -2253911629886400664, guid: 5deb6ee3ca128324fb6b3cdc4d6c7c00, type: 3}
   horizonLine: {fileID: 5378990321713357306, guid: a19d2c332b6d7c94f9d20c7e0396e3db, type: 3}
   WindmillAdded:
     m_PersistentCalls:
       m_Calls: []
+  smog: {fileID: 1918502254820004745, guid: cec32fbb97ebf824d9a77608ddc37eae, type: 3}
   windmill: {fileID: 8937669125120393950}
 --- !u!212 &6743051655768592846
 SpriteRenderer:

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.Events;
 
 public class moveSmogScript : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class moveSmogScript : MonoBehaviour
     private float timer = 0;
     private int moveSpeed = 5;
     private Vector3 direction;
+    public UnityEvent SmogDestroyed;
 
     private int smogHealth = 0;
 
@@ -49,6 +51,7 @@ public class moveSmogScript : MonoBehaviour
     private void OnMouseDown()
     {
         Destroy(gameObject);
+        gameObject.GetComponentInParent<SmogCounter>().SetSmogCounter(-1);
         manage.AddGold(5);
         Debug.Log(manage.GetGold());
 

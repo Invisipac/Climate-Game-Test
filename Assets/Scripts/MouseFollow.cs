@@ -11,6 +11,7 @@ public class MouseFollow : MonoBehaviour
     [SerializeField] GameObject objectToPlace;
     [SerializeField] Transform horizonLine;
     [SerializeField] UnityEvent WindmillAdded;
+    [SerializeField] GameObject smog;
     private GameManage manage;
 
     public GameObject windmill;
@@ -86,4 +87,6 @@ public class MouseFollow : MonoBehaviour
             }
         }
     }
+
+    
 }
