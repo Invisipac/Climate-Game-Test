@@ -9,7 +9,10 @@ public class MouseFollow : MonoBehaviour
     // Start is called before the first frame update
 
     [SerializeField] GameObject objectToPlace;
-    [SerializeField] Transform horizonLine;
+    [SerializeField] Transform horizonLineTop;
+    [SerializeField] Transform horizonLineBottom;
+    [SerializeField] Transform boundaryLineRight;
+    [SerializeField] Transform boundaryLineLeft;
     [SerializeField] UnityEvent WindmillAdded;
     [SerializeField] GameObject smog;
     private GameManage manage;
@@ -40,11 +43,24 @@ public class MouseFollow : MonoBehaviour
         Vector3 mousePos = Input.mousePosition;
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
         mousePos.z = 0;
-        transform.position = new Vector3(mousePos.x, 0, 0);
-        if (mousePos.y < horizonLine.position.y)
+        transform.position = new Vector3(mousePos.x, mousePos.y, 0);
+        if (mousePos.y >= horizonLineTop.position.y)
         {
-            transform.position = new Vector3(mousePos.x, mousePos.y, 0);
+            transform.position = new Vector3(mousePos.x, horizonLineTop.position.y, 0);
         }
+
+
+        if (mousePos.x > boundaryLineRight.position.x)
+        {
+            transform.position = new Vector3(boundaryLineRight.position.x, mousePos.y, 0);
+        }
+
+        if (mousePos.y > horizonLineTop.position.y && mousePos.x > boundaryLineRight.position.x)
+        {
+            transform.position = new Vector3(boundaryLineRight.position.x, horizonLineTop.position.y, 0);
+        }
+
+
 
 
         //MoveCursor();
