@@ -73,12 +73,17 @@ public class MouseFollow : MonoBehaviour
 
     public void PlaceObject(InputAction.CallbackContext input)
     {
-        if (input.started && manage.GetGold() >= 10)
+        if (windmillActive)
         {
-            Instantiate(objectToPlace, cursor.transform.position, Quaternion.identity);
-            WindmillAdded.Invoke();
-            manage.AddGold(-10);
-            return;
+            if (input.started && manage.GetGold() >= 10)
+            {
+                Instantiate(objectToPlace, transform.position, Quaternion.identity);
+                windmillActive = false;
+                windmill.SetActive(windmillActive);
+                WindmillAdded.Invoke();
+                manage.AddGold(-10);
+                return;
+            }
         }
     }
 }
