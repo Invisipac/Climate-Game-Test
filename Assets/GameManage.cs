@@ -9,7 +9,11 @@ public class GameManage : MonoBehaviour
     public Text goldText;
     private int windmillCounter = 0;
     private int gold = 0;
-    
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+    }
 
     private void Update()
     {
