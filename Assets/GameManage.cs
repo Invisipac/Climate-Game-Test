@@ -25,6 +25,8 @@ public class GameManage : MonoBehaviour
         return windmillCounter;
     }
 
+
+
     public int GetGold()
     {
         return gold;

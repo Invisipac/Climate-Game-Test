@@ -14,7 +14,7 @@ public class ProgressBar : MonoBehaviour
 
     [SerializeField] GameObject smogSpawner;
     [SerializeField] GameObject gameManager;
-
+    [SerializeField] SmogCounter smogParent;
     private SmogSpawnScript smogSpawn;
     private GameManage gameManage;
     private int progressRate = 2;
@@ -24,6 +24,7 @@ public class ProgressBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         smogSpawn = smogSpawner.GetComponent<SmogSpawnScript>();
         gameManage = gameManager.GetComponent<GameManage>();
     }
@@ -44,7 +45,7 @@ public class ProgressBar : MonoBehaviour
 
     private void SetFillAmount()
     {
-        fillBar.fillAmount += (float) smogSpawn.GetCounter() / 100;
+        fillBar.fillAmount += (float) smogParent.GetSmogCounter()/ 100;
         fillBar.fillAmount -= (float) 2 * gameManage.GetWindmills() / 100;
     }
 
