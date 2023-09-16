@@ -37,7 +37,6 @@ public class ProgressBar : MonoBehaviour
             SetFillAmount();
             timer = 0;
             GameOver();
-            Debug.Log(cur);
         }
 
         
