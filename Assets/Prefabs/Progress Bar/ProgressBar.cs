@@ -37,10 +37,11 @@ public class ProgressBar : MonoBehaviour
         {
             SetFillAmount();
             timer = 0;
-            GameOver();
+            
         }
+        GameOver();
+        WinGame();
 
-        
     }
 
     private void SetFillAmount()
@@ -56,5 +57,13 @@ public class ProgressBar : MonoBehaviour
             SceneManager.LoadScene("GameOver");
         }
    
+    }
+
+    private void WinGame()
+    {
+        if (fillBar.fillAmount == 0)
+        {
+            SceneManager.LoadScene("WinScreen");
+        }
     }
 }
