@@ -53,7 +53,7 @@ public class moveSmogScript : MonoBehaviour
         Destroy(gameObject);
         gameObject.GetComponentInParent<SmogCounter>().SetSmogCounter(-1);
         manage.AddGold(5);
-        Debug.Log(manage.GetGold());
+       // Debug.Log(manage.GetGold());
 
     }
 

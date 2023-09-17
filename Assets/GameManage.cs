@@ -19,9 +19,9 @@ public class GameManage : MonoBehaviour
     {
         
     }
-    public void AddWindmill()
+    public void SetWindmill(int wms)
     {
-        windmillCounter += 1;
+        windmillCounter += wms;
     }
 
     public int GetWindmills()
@@ -29,7 +29,7 @@ public class GameManage : MonoBehaviour
         return windmillCounter;
     }
 
-
+    
 
     public int GetGold()
     {

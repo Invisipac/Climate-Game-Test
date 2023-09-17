@@ -10,6 +10,7 @@ public class TimerBar : MonoBehaviour
     private float cur;
     public Image fillBar;
     [SerializeField] GameObject windmill;
+    [SerializeField] GameManage manage;
     private float timer = 5;
 
     // Start is called before the first frame update
@@ -25,7 +26,8 @@ public class TimerBar : MonoBehaviour
         fillBar.fillAmount = (float) timer / 5;
         if (timer < 0)
         {
-            Destroy(windmill); 
+            Destroy(windmill);
+            manage.SetWindmill(-1);
         }
     }
 }
