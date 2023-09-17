@@ -46,8 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0617cbab63232634d9560df2db949398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToPlace: {fileID: -2253911629886400664, guid: 5deb6ee3ca128324fb6b3cdc4d6c7c00, type: 3}
-  horizonLine: {fileID: 5378990321713357306, guid: a19d2c332b6d7c94f9d20c7e0396e3db, type: 3}
+  objectToPlace: {fileID: 5389406671536902932, guid: 46379325f68d8b847ade261878901e9c, type: 3}
+  horizonLineTop: {fileID: 0}
+  horizonLineBottom: {fileID: 0}
+  boundaryLineRight: {fileID: 0}
+  boundaryLineLeft: {fileID: 0}
   WindmillAdded:
     m_PersistentCalls:
       m_Calls: []
