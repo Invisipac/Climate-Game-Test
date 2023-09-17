@@ -10,13 +10,13 @@ public class TimerBar : MonoBehaviour
     private float cur;
     public Image fillBar;
     [SerializeField] GameObject windmill;
-    [SerializeField] GameManage manage;
+    private GameManage manage;
     private float timer = 5;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        manage = GameObject.FindFirstObjectByType<GameManage>();
     }
 
     // Update is called once per frame

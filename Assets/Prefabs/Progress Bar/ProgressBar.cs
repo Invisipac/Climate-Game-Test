@@ -44,16 +44,22 @@ public class ProgressBar : MonoBehaviour
         }
         WinGame();
         GameOver();
-        Debug.Log(gameManage.GetWindmills());
+        //Debug.Log(gameManage.GetWindmills());
+        //Debug.Log(smogParent.GetSmogCounter());
 
 
     }
 
     private void SetFillAmount()
     {
-        fillBar.fillAmount += (float)smogParent.GetSmogCounter() / 100;
-        //Debug.Log(fillBar.fillAmount);
         fillBar.fillAmount -= (float)gameManage.GetWindmills() / 100;
+        fillBar.fillAmount += (float)smogParent.GetSmogCounter() / 100;
+        
+        Debug.Log(fillBar.fillAmount);
+        if (fillBar.fillAmount == 1)
+        {
+            Debug.Log("test");
+        }
     }
 
     private void WinGame()
